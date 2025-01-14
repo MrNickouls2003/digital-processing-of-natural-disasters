@@ -7,11 +7,12 @@ Antes de executar o código, certifique-se de que todos os requisitos estão ins
 - Python 3.x
 - OpenCV (`cv2`)
 - NumPy
+- scikit-image
 
 ### Instalação:
 Instale as bibliotecas necessárias usando o seguinte comando:
 ```bash
-pip install opencv-python numpy
+pip install opencv-python numpy scikit-image
 ```
 
 ---
@@ -20,11 +21,12 @@ pip install opencv-python numpy
 Organize as imagens e os diretórios conforme a estrutura abaixo:
 
 ```
-imagens/
-├── original/           # Contém as imagens originais (.png)
-├── original_cinza/     # Para salvar imagens em escala de cinza
-├── filtragem/          # Para salvar imagens após o filtro de passa-baixa
-└── segmentadas/        # Para salvar imagens segmentadas
+- imagens/
+  - original/               # Imagens originais para processamento
+  - original_cinza/         # Imagens convertidas para escala de cinza
+  - filtragem/              # Imagens filtradas (passa-baixa + ruído gaussiano)
+  - segmentadas/            # Imagens segmentadas (utilizando Otsu)
+- script.py                 # Código Python para processamento e segmentação
 ```
 
 Certifique-se de que as pastas **original**, **original_cinza**, **filtragem** e **segmentadas** existam antes de rodar o código.
@@ -48,7 +50,7 @@ Para executar o script, siga os passos abaixo:
 1. **Conversão para Escala de Cinza**:  
    As imagens na pasta `original` serão convertidas para escala de cinza e salvas na pasta `original_cinza`.
 
-2. **Filtragem de Passa-Baixa**:  
+2. **Filtragem de Passa-Baixa e Ruido Gaussiano**:  
    As imagens em escala de cinza serão suavizadas para reduzir ruídos, e os resultados serão salvos na pasta `filtragem`.
 
 3. **Segmentação com Otsu**:  
@@ -59,7 +61,7 @@ Para executar o script, siga os passos abaixo:
 ## 5. Resultados Esperados
 
 - **original_cinza/**: Imagens convertidas para escala de cinza.
-- **filtragem/**: Imagens suavizadas com filtro de passa-baixa.
+- **filtragem/**: Imagens suavizadas com filtro de passa-baixa e ruido gaussiano.
 - **segmentadas/**: Imagens binárias com regiões de interesse destacadas após segmentação.
 
 ---
