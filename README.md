@@ -12,7 +12,7 @@ Antes de executar o código, certifique-se de que todos os requisitos estão ins
 ### Instalação:
 Instale as bibliotecas necessárias usando o seguinte comando:
 ```bash
-pip install opencv-python numpy scikit-image
+pip install opencv-python numpy scikit-image matplotlib
 ```
 
 ---
@@ -26,10 +26,11 @@ Organize as imagens e os diretórios conforme a estrutura abaixo:
   - original_cinza/         # Imagens convertidas para escala de cinza
   - filtragem/              # Imagens filtradas (passa-baixa + ruído gaussiano)
   - segmentadas/            # Imagens segmentadas (utilizando Otsu)
+  - histograma/             # Histograma das imagens cinzas
 - script.py                 # Código Python para processamento e segmentação
 ```
 
-Certifique-se de que as pastas **original**, **original_cinza**, **filtragem** e **segmentadas** existam antes de rodar o código.
+Certifique-se de que as pastas **original**, **original_cinza**, **filtragem**, **segmentadas** e **histogramas** existam antes de rodar o código.
 
 ---
 
